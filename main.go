@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	staticFileServer := http.FileServer(http.Dir("./static"))
+	staticFileServer := http.FileServer(http.Dir("./static-files"))
 	http.Handle("/", staticFileServer)
 
 	log.Println("Starting the web application on port 8080...")
