@@ -1,6 +1,7 @@
 FROM golang:latest
 
 WORKDIR /app
+
 MAINTAINER YourName
 
 ADD . /app/
