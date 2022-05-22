@@ -1,2 +1,2 @@
 # bookpanda-library
-a library built with Go, frontend frameworks, and Dockerized
+a demo library built with Go, frontend frameworks, and Dockerized
