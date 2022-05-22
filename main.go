@@ -1,17 +1,16 @@
 package main
 
 import (
-	"log"
-	"net/http"
+	"github.com/gin-gonic/gin"
 )
 
 func main() {
-	staticFileServer := http.FileServer(http.Dir("./static-files"))
-	http.Handle("/", staticFileServer)
-
-	log.Println("Starting the web application on port 8080...")
-	err := http.ListenAndServe(":8080", nil)
+	// create Gin router
+	var router *gin.Engine
+	router = gin.Default()
+	router.Static("/", "./static-files")
+	err := router.Run()
 	if err != nil {
-		log.Fatal(err)
+		return
 	}
 }
